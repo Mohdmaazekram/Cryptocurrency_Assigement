@@ -19,6 +19,12 @@ performance indicators, and a dynamic summary table to highlight market movement
 
 ## 🔍 Overview
 
-- *This project implements an automated data pipeline that scrapes real-time cryptocurrency data from Investing.com,
+- **This project implements an automated data pipeline that scrapes real-time cryptocurrency data from Investing.com,
 processes it using Python, and pushes the cleaned data into BigQuery on Google Cloud Platform (GCP). The pipeline is
-scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.*
+scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.**
+
+## 🔧 Tools & Technologies Used In This Project
+
+- • Python with Selenium, Pandas, NumPy, BigQuery and Other libraries.
+- • I Used Selenium WebDriver for dynamic website scraping.
+- • Google Cloud Platform (GCP) and its Services is Use For Automate Data Pipeline that Scrapes Real-Time Data.

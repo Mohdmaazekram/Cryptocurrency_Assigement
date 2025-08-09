@@ -16,3 +16,9 @@ cryptocurrency name/symbol, time range, and percentage change thresholds, along 
 performance indicators, and a dynamic summary table to highlight market movements.
 
 ---
+
+## 🔍 Overview
+
+- *This project implements an automated data pipeline that scrapes real-time cryptocurrency data from Investing.com,
+processes it using Python, and pushes the cleaned data into BigQuery on Google Cloud Platform (GCP). The pipeline is
+scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.*

@@ -25,6 +25,12 @@ scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.**
 
 ## 🔧 Tools & Technologies Used In This Project
 
-- • Python with Selenium, Pandas, NumPy, BigQuery and Other libraries.
-- • I Used Selenium WebDriver for dynamic website scraping.
-- • Google Cloud Platform (GCP) and its Services is Use For Automate Data Pipeline that Scrapes Real-Time Data.
+- Python with Selenium, Pandas, NumPy, BigQuery and Other libraries.
+- I Used Selenium WebDriver for dynamic website scraping.
+- Google Cloud Platform (GCP) and its Services is Use For Automate Data Pipeline that Scrapes Real-Time Data.
+
+      * Cloud Shell
+      * Artifact Registry
+      * Cloud Run (Job)
+      * Cloud Scheduler
+      * BigQuery

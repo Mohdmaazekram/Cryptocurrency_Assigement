@@ -6,7 +6,7 @@ o **BigQuery dataset and table link (with appropriate access) :** https://consol
 
 o **Looker Studio dashboard link :** https://lookerstudio.google.com/reporting/0204258c-2b79-4cda-ac8e-252ebc23627d/page/p_x57mqzj6sd
 
-
+---
 **Problem Statement :** 
 Real-Time Cryptocurrency Data Pipeline Using GCP and Python
 

@@ -3,9 +3,8 @@
 **Problem Statement: Real-Time Cryptocurrency Data Pipeline Using GCP and Python**
 
 ## 🔍 Overview
-A digital marketing agency wants to monitor and analyze real-time cryptocurrency data to identify market trends and support datadriven strategy decisions. The goal is to design an automated data pipeline that extracts pricing data from the dynamic website
-https://www.investing.com/crypto/ for top 10 crypto currencies, processes it, and makes it available for analysis and visualization
-through a dashboard.
+A digital marketing agency wants to monitor and analyze real-time cryptocurrency data to identify market trends and support datadriven strategy decisions. The goal is to design an automated data pipeline that extracts pricing data from the dynamic website https://www.investing.com/crypto/ for top 10 crypto currencies, processes it, and makes it available for analysis and visualization through a dashboard.
+
 As a data engineer, your task is to build a real-time data pipeline using Google Cloud Platform (GCP) and Python. The pipeline should
 begin with a Selenium script that scrapes key cryptocurrency data—including name, symbol, current price, % change, volume, and
 market cap—from the specified website. This scraping process should run at hourly intervals.

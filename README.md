@@ -15,4 +15,4 @@ Finally, build a Looker Studio dashboard connected to the BigQuery table. The da
 cryptocurrency name/symbol, time range, and percentage change thresholds, along with visualizations like time-series charts, key
 performance indicators, and a dynamic summary table to highlight market movements.
 
-
+---

@@ -38,6 +38,7 @@ scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.**
 ## 💻 Step-by-Step Implementation
 
 - 1) Upload and Test Code in Cloud Shell
+     
           • Open Cloud Shell in GCP Console.
           • Create a working directory and upload necessary files Like:
             Uploading files from my local system into this directory using cloud shell terminal:

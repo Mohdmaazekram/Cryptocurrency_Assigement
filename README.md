@@ -34,3 +34,17 @@ scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.**
       * Cloud Run (Job)
       * Cloud Scheduler
       * BigQuery
+
+## 💻 Step-by-Step Implementation
+
+- 1) Upload and Test Code in Cloud Shell
+          • Open Cloud Shell in GCP Console.
+          • Create a working directory and upload necessary files Like:
+            Uploading files from my local system into this directory using cloud shell terminal:
+               * Dockerfile
+               * requirements.txt
+               * scraper.py
+     
+          • Test Python Script:
+               * Command to Run or Test Python File : python3 scraper.py in cloud shell terminal.
+               * Also Install Python Library : pip install -r requirements.txt in cloud shell terminal

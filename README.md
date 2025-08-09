@@ -37,7 +37,7 @@ scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.**
 
 ## 💻 Step-by-Step Implementation
 
-- 1) Upload and Test Code in Cloud Shell
+1) Upload and Test Code in Cloud Shell
      
           • Open Cloud Shell in GCP Console.
           • Create a working directory and upload necessary files Like:
@@ -49,3 +49,22 @@ scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.**
           • Test Python Script:
                * Command to Run or Test Python File : python3 scraper.py in cloud shell terminal.
                * Also Install Python Library : pip install -r requirements.txt in cloud shell terminal
+   
+2) Build Docker Image and Push to Artifact Registry
+   
+          • Code For Create a Docker repository:
+               * gcloud artifacts repositories create my-repo --repository-format=docker --location=us-central1 --description="Scraper Image Repo"
+   
+          • Build and push Docker image in Cloud Shell Terminal:
+               * gcloud builds submit --tag us-central1-docker.pkg.dev/Project_ID/Repositry_name/image_name
+               * For Eg: gcloud builds submit --tag us-central1-docker.pkg.dev/local-axis-461918-j2/my-repo/scraper
+
+3) Create Cloud Run Job
+
+               * First Go to Job Run.
+               * Second Click on Jobs and Create it.
+               * Third Select container image from Artifact Registry.
+                    For Eg: my-repo (Repositry_name)
+                     Scraper (image_name)
+                     486c99e12b
+               * execute the job. from the UI button or from cloud shell.

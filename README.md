@@ -1,7 +1,9 @@
 # 📊 Assignment for Data Engineer
 
 o **Code repository link :** https://github.com/Mohdmaazekram/Cryptocurrency_Assigement
+
 o **BigQuery dataset and table link (with appropriate access) :** https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1smaazgsheet!2scrypto_currencies! 3scrypto_currencies_data
+
 o **Looker Studio dashboard link :** https://lookerstudio.google.com/u/1/reporting/0204258c-2b79-4cdaac8e-252ebc23627d/page/p_x57mqzj6sd
 
 

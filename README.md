@@ -68,3 +68,53 @@ scheduled to run every hour using Cloud Run Jobs and Cloud Scheduler.**
                      Scraper (image_name)
                      486c99e12b
                * execute the job. from the UI button or from cloud shell.
+   
+4) Grant BigQuery Permissions to the Job
+
+               SA_EMAIL=$(gcloud run jobs describe scraper --region=us-central1 --
+               format="value(template.template.serviceAccount)")
+               gcloud projects add-iam-policy-binding [Project_ID] (local-axis-461918-j2) \
+                --member="serviceAccount:$SA_EMAIL" \
+                --role="roles/bigquery.dataEditor"
+               gcloud projects add-iam-policy-binding [Project_ID] (local-axis-461918-j2) \
+                --member="serviceAccount:$SA_EMAIL" \
+                --role="roles/bigquery.metadataV
+
+5) Schedule Cloud Run Job Every 1 Hour with Cloud Scheduler
+
+               * First Go to Job Run.
+               * Second Click on Job Next Click on [Container] scraper
+               * Then Click on Trigger to set according to your condition.
+
+6) Updating the Python Code and Redeploying
+
+               * 1. Edit scraper.py
+                     nano scraper.py
+               * 2. Rebuild and push the image to Artifact Registry
+                     gcloud builds submit --tag us-central1-docker.pkg.dev/maazgsheet/my-repo/scraper
+               * 3. Update the Cloud Run Job with the new image
+                     gcloud run jobs update scraper \
+                     --image=us-central1-docker.pkg.dev/maazgsheet/my-repo/scraper \
+                     --region=us-central1
+               * 4. Execute the updated Cloud Run Job
+                     gcloud run jobs execute scraper --region=us-central1
+
+Quick Fix: Limit the Build Context
+
+                mkdir scraper-job
+                cp scraper.py Dockerfile requirements.txt scraper-job/
+                cd scraper-job
+                gcloud builds submit --tag us-central1-docker.pkg.dev/local-axis-461918-j2/my-repo/scraper
+
+---
+
+## Summary of Files Used
+- **scraper.py : Python script for scraping and pushing to BigQuery**
+- **requirements.txt : Python dependencies**
+- **Dockerfile : Docker image setup for Cloud Run Job**
+
+## Final Notes
+
+- **Cloud Scheduler triggers the Cloud Run Job scraper every hour.**
+- **The job scrapes the top 10 crypto data from Investing.com and appends it to BigQuery.**
+- **BigQuery table used: maazgsheet.crypto_currencies.crypto_currencies_data.**
